@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "imba/dist/imba.js": "./imba/dist/imba.js"
+  }
+}

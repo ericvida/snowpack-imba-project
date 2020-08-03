@@ -1,0 +1,44 @@
+{
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "web": "http-server build -o --cors -c-1"
+  },
+  "snowpack": {
+    "mount": {
+      "static": "/static",
+      "public": "/"
+    },
+    "plugins": [
+      [
+        "./plugin/imba-snowpack",
+        {
+          "entrypoints": ["app-root"]
+        }
+      ]
+    ],
+    "installOptions": {
+    },
+    "devOptions": {
+      "bundle": true,
+      "open": "default"
+    },
+    "buildOptions": {
+      "minify": true
+    }
+  },
+  "dependencies": {
+    "imba": "^2.0.0-alpha.70",
+    "snowpack": "^2.7.5"
+  },
+  "devDependencies": {
+    "convert-source-map": "^1.7.0",
+    "fdir": "^4.0.0",
+    "fs-extra": "^9.0.1",
+    "source-map": "^0.7.3",
+    "tmp": "^0.2.1",
+    "upath": "^1.2.0",
+    "yarn": "^1.22.4"
+  },
+  "license": "MIT"
+}
